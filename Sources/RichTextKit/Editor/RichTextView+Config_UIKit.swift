@@ -29,19 +29,25 @@ public extension RichTextView {
             isScrollingEnabled: Bool = true,
             allowsEditingTextAttributes: Bool = true,
             autocapitalizationType: UITextAutocapitalizationType = .sentences,
-            spellCheckingType: UITextSpellCheckingType = .no
+            spellCheckingType: UITextSpellCheckingType = .no,
+            useFormattingWhenPastingText: Bool = true
         ) {
             self.isScrollingEnabled = isScrollingEnabled
             self.allowsEditingTextAttributes = allowsEditingTextAttributes
             self.autocapitalizationType = autocapitalizationType
             self.spellCheckingType = spellCheckingType
+            self.useFormattingWhenPastingText = useFormattingWhenPastingText
         }
 
         /// Whether or not the editor should scroll.
         public var isScrollingEnabled: Bool
 
-        /// Whether textView allows editting text attributes
+        /// Whether textView allows editing text attributes
         public var allowsEditingTextAttributes: Bool
+
+        /// Whether textView allows uses formatting from pasted text
+        public var useFormattingWhenPastingText: Bool
+
 
         /// Kind of auto capitalization
         public var autocapitalizationType: UITextAutocapitalizationType

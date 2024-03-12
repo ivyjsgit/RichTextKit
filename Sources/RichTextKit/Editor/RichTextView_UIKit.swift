@@ -44,6 +44,7 @@ open class RichTextView: UITextView, RichTextViewComponent {
         self.setup(with: string, format: format)
     }
 
+    public var useFormattingWhenPastingText: Bool
     // MARK: - Properties
 
     /// The configuration to use by the rich text view.
@@ -53,6 +54,7 @@ open class RichTextView: UITextView, RichTextViewComponent {
             allowsEditingTextAttributes = configuration.allowsEditingTextAttributes
             autocapitalizationType = configuration.autocapitalizationType
             spellCheckingType = configuration.spellCheckingType
+            self.useFormattingWhenPastingText = configuration.useFormattingWhenPastingText
         }
     }
 
